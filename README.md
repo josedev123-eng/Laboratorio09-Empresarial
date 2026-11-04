@@ -1,16 +1,38 @@
-# React + Vite
+# CineTecsup - Laboratorio 09
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Cartelera de cine hecha con React y Vite para el curso Desarrollo de Aplicaciones Empresariales.
 
-Currently, two official plugins are available:
+## Cómo ejecutarlo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Estructura
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```
+src/
+├── components/
+│   ├── Header/      nombre del cine y navegación
+│   ├── Hero/        banner de la película destacada (recibe movie por props)
+│   ├── MovieList/   recorre la cartelera con map (recibe movies por props)
+│   ├── MovieCard/   tarjeta de una película (recibe movie por props)
+│   └── Footer/      contacto e información
+├── data/
+│   └── movies.js    cartelera con 8 películas
+├── styles/
+│   ├── variables.css
+│   ├── base.css
+│   ├── layout.css
+│   └── index.css
+├── App.jsx          compone todos los componentes
+└── main.jsx
+```
 
-## Expanding the Oxlint configuration
+App.jsx importa los datos y los pasa hacia abajo: la película destacada a Hero y la cartelera completa a MovieList, que a su vez le pasa cada película a MovieCard.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Dependencias
+
+- react, react-dom
+- vite, @vitejs/plugin-react
