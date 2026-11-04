@@ -55,3 +55,23 @@
 .hero-button:hover {
   opacity: 0.85;
 }
+
+@media (max-width: 640px) {
+  .hero-overlay {
+    background: linear-gradient(180deg, rgba(15, 17, 21, 0.95) 40%, rgba(15, 17, 21, 0.6));
+  }
+
+  .hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+
+  .hero-poster {
+    width: 160px;
+  }
+
+  .hero-info h1 {
+    font-size: 1.9rem;
+  }
+}

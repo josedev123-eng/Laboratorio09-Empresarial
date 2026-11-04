@@ -34,3 +34,17 @@
 .header-nav a:hover {
   color: var(--color-text);
 }
+
+@media (max-width: 640px) {
+  .header-content {
+    height: auto;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+  }
+
+  .header-nav {
+    gap: var(--space-sm);
+    font-size: 0.9rem;
+  }
+}
